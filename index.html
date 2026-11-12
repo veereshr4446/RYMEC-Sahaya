@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>RYMEC Sahaya</title>
+  <meta name="description" content="Report problems on the RYMEC campus and track their progress.">
+  <meta name="theme-color" content="#0f1b3d">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>RYMEC Sahaya</h1>
+      <p id="collegeName"></p>
+    </div>
+    <button id="installBtn" class="ghost" hidden>Install app</button>
+  </header>
+
+  <div id="demoBanner" class="banner" hidden>Demo mode: reports are saved only on this device. Connect Supabase in config.js to go live for everyone.</div>
+
+  <main>
+    <!-- REPORT -->
+    <section id="view-report" class="view active" aria-label="Report a problem">
+      <form id="reportForm" novalidate>
+        <h2>What's the problem?</h2>
+
+        <fieldset>
+          <legend>Category</legend>
+          <div id="cats" class="chips"></div>
+        </fieldset>
+
+        <label>Title
+          <input id="title" maxlength="120" placeholder="e.g. Projector not working in Room 12" required>
+        </label>
+
+        <label>Details
+          <textarea id="desc" rows="5" maxlength="2000" placeholder="What is wrong, since when, and who is affected?" required></textarea>
+        </label>
+
+        <div class="row">
+          <label>Where
+            <input id="loc" maxlength="120" placeholder="Block / room / area">
+          </label>
+          <label>Department
+            <select id="dept"></select>
+          </label>
+        </div>
+
+        <label>Photo (optional)
+          <input id="photo" type="file" accept="image/*">
+        </label>
+        <img id="photoPreview" class="preview" alt="" hidden>
+
+        <label class="check"><input id="anon" type="checkbox" checked> Report anonymously</label>
+        <div id="identity" hidden>
+          <div class="row">
+            <label>Your name <input id="name" maxlength="80" autocomplete="name"></label>
+            <label>Phone or email <input id="contact" maxlength="120" autocomplete="email"></label>
+          </div>
+          <p class="hint">Only the college team can see this. It is never shown publicly.</p>
+        </div>
+
+        <label class="check"><input id="priv" type="checkbox"> Keep private (don't show on the public list)</label>
+        <p id="privHint" class="hint" hidden>Harassment and ragging reports are always private.</p>
+
+        <p id="formError" class="error" role="alert" hidden></p>
+        <button id="submitBtn" class="primary" type="submit">Submit report</button>
+      </form>
+
+      <div id="done" class="card success" hidden>
+        <h2>Report submitted ✅</h2>
+        <p>Save your ticket ID to check progress later:</p>
+        <p class="ticket" id="ticketOut"></p>
+        <div class="row">
+          <button id="copyTicket" class="ghost" type="button">Copy ID</button>
+          <button id="another" class="primary" type="button">Report another</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ISSUES -->
+    <section id="view-issues" class="view" aria-label="Campus issues">
+      <h2>Campus issues</h2>
+      <div class="row filters">
+        <select id="fCat" aria-label="Filter by category"><option value="">All categories</option></select>
+        <select id="fStatus" aria-label="Filter by status"><option value="">Any status</option></select>
+        <select id="fSort" aria-label="Sort">
+          <option value="votes">Most upvoted</option>
+          <option value="new">Newest</option>
+        </select>
+      </div>
+      <div id="issueList" class="list"></div>
+    </section>
+
+    <!-- TRACK -->
+    <section id="view-track" class="view" aria-label="Track a report">
+      <h2>Track a report</h2>
+      <form id="trackForm" class="row">
+        <input id="trackId" placeholder="Ticket ID, e.g. RY-AB12CD" autocomplete="off" autocapitalize="characters" aria-label="Ticket ID">
+        <button class="primary" type="submit">Check</button>
+      </form>
+      <div id="trackOut"></div>
+      <h3>My reports on this device</h3>
+      <div id="mine" class="list"></div>
+    </section>
+  </main>
+
+  <nav class="tabs" aria-label="Sections">
+    <button data-view="report" class="on">✍️<span>Report</span></button>
+    <button data-view="issues">📋<span>Issues</span></button>
+    <button data-view="track">🔎<span>Track</span></button>
+  </nav>
+
+  <footer>
+    <a id="siteLink" href="#" target="_blank" rel="noopener"></a> · <a href="admin.html">Staff login</a>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
