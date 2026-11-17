@@ -115,3 +115,4 @@ textarea{min-height:90px}
 .preview{border:1px solid var(--line)}
 .primary:hover{filter:brightness(1.08)}
 .ghost:hover{background:color-mix(in srgb,currentColor 10%,transparent)}
+.up:hover{border-color:var(--brand)}
