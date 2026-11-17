@@ -137,3 +137,4 @@ select{cursor:pointer}
 .chips span:active{transform:scale(.96)}
 .card{overflow-wrap:anywhere}
 .card h3{font-weight:700}
+.meta{margin-bottom:2px}
