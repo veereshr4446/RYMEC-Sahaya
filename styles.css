@@ -135,3 +135,4 @@ html{scroll-padding-top:70px}
 select{cursor:pointer}
 .chips span{transition:background .15s,border-color .15s}
 .chips span:active{transform:scale(.96)}
+.card{overflow-wrap:anywhere}
