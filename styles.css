@@ -134,3 +134,4 @@ html{scroll-padding-top:70px}
 .top{box-shadow:0 2px 8px rgba(0,0,0,.15)}
 select{cursor:pointer}
 .chips span{transition:background .15s,border-color .15s}
+.chips span:active{transform:scale(.96)}
