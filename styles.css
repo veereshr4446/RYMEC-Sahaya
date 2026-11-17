@@ -125,3 +125,5 @@ textarea{min-height:90px}
 .top{position:sticky;top:0;z-index:4}
 .banner{text-align:center}
 .tabs{box-shadow:0 -2px 10px rgba(0,0,0,.05)}
+.tabs button{transition:color .15s}
+.tabs button:hover{color:var(--brand)}
