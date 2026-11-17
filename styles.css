@@ -112,3 +112,4 @@ input::placeholder,textarea::placeholder{color:var(--mute);opacity:.7}
 input:disabled,select:disabled{opacity:.6;cursor:not-allowed}
 input:hover,select:hover,textarea:hover{border-color:var(--mute)}
 textarea{min-height:90px}
+.preview{border:1px solid var(--line)}
