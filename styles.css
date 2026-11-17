@@ -97,3 +97,5 @@ footer a{color:inherit}
 .admin .edit select{margin:0}
 .tag{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad);border-radius:6px;padding:1px 8px;font-size:.75rem;font-weight:700}
 .who{font-size:.82rem;margin-top:6px}
+
+button:active{transform:scale(.97)}
