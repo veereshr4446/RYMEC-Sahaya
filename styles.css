@@ -121,3 +121,4 @@ textarea{min-height:90px}
 .success{border-color:var(--ok)}
 .empty{font-style:italic}
 .note{line-height:1.45}
+.steps i{transition:background .3s}
