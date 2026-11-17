@@ -107,3 +107,4 @@ a{text-underline-offset:3px}
 footer a:hover{color:var(--brand)}
 h1{letter-spacing:-.01em}
 .top h1{font-weight:800}
+.hint{line-height:1.4}
