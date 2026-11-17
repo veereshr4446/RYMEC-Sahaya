@@ -131,3 +131,4 @@ textarea{min-height:90px}
 body{-webkit-font-smoothing:antialiased}
 html{scroll-padding-top:70px}
 .top p{margin-top:2px}
+.top{box-shadow:0 2px 8px rgba(0,0,0,.15)}
