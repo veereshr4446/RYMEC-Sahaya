@@ -109,3 +109,4 @@ h1{letter-spacing:-.01em}
 .top h1{font-weight:800}
 .hint{line-height:1.4}
 input::placeholder,textarea::placeholder{color:var(--mute);opacity:.7}
+input:disabled,select:disabled{opacity:.6;cursor:not-allowed}
