@@ -118,3 +118,4 @@ textarea{min-height:90px}
 .up:hover{border-color:var(--brand)}
 .pill{text-transform:uppercase;letter-spacing:.04em}
 .ticket{user-select:all}
+.success{border-color:var(--ok)}
