@@ -101,3 +101,5 @@ footer a{color:inherit}
 button:active{transform:scale(.97)}
 ::selection{background:var(--brand);color:var(--brand-ink)}
 .chips span:hover{border-color:var(--brand)}
+.card{transition:box-shadow .2s}
+.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.08)}
