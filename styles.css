@@ -120,3 +120,4 @@ textarea{min-height:90px}
 .ticket{user-select:all}
 .success{border-color:var(--ok)}
 .empty{font-style:italic}
+.note{line-height:1.45}
