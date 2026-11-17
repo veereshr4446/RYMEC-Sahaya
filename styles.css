@@ -113,3 +113,4 @@ input:disabled,select:disabled{opacity:.6;cursor:not-allowed}
 input:hover,select:hover,textarea:hover{border-color:var(--mute)}
 textarea{min-height:90px}
 .preview{border:1px solid var(--line)}
+.primary:hover{filter:brightness(1.08)}
